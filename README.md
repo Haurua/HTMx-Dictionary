@@ -6,7 +6,7 @@ Django combined with HTMx is considered a good combination as it compliments Dja
 
 HTMx is a popular library with Django developers so this was a demonstration of implementing one of the features, offering AJAX requests without the need of large JavaScript front-end frameworks.
 
-# Details
+# In-Depth Details
 
 I came across HTMx while revising and learned that AJAX requests could be made using it without the need of heavy front-end frameworks. I set out to familiarise myself with its features and decided to create a simple application demonstrating a core feature.
 
