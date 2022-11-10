@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'htmx_dictionary/favicon/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'htmx_dictionary/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'htmx_dictionary/css/animation.css' %}">
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <title>HTMx Dictionary</title>
+</head>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+<div class="application-container">
+    <section class="gif">
+        <img src="{% static 'htmx_dictionary/img/walking_folder.gif' %}" alt="Jolly Walking Folder">
+    </section>
+    <header>
+        <h1>HTMx Dictionary</h1>
+    </header>
+    <section class="search">
+        <form hx-post="{{ request.path }}" hx-target="#results">
+            <label for="search">
+                <input type="search" name="search">
+            </label>
+            <button hx-trigger="click">Search</button>
+        </form>
+    </section>
+    <main id="results">
+    </main>
+</div>
+</body>
+</html>
